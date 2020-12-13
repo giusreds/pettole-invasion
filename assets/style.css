@@ -70,7 +70,6 @@ html, body {
     height: 100%;
 }
 .embed-responsive {
-    margin-top: var(--sat);
     background: black;
     margin: auto;
     position: absolute;
