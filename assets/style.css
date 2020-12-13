@@ -49,7 +49,7 @@ html, body {
     margin: 0;
     overflow: hidden;
     font-family: 'pixel';
-    background-color: #855E8B;
+    background-color: #E2A7EC;
     user-select: none;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
@@ -70,6 +70,7 @@ html, body {
     height: 100%;
 }
 .embed-responsive {
+    margin-top: var(--sat);
     background: black;
     margin: auto;
     position: absolute;
