@@ -136,12 +136,12 @@ function apriReadme() {
 function apriLeaderboard() {
     $("#leaderboard").show();
     $("#leaderboard").addClass("visible");
-    $("#game").addClass("fade");
+    $("#blackb").fadeIn();
     $("#leaderb")[0].contentWindow.postMessage('{"name":"sync"}', '*');
 }
 function chiudiLeaderboard() {
     $("#leaderboard").removeClass("visible");
-    $("#game").removeClass("fade");
+    $("#blackb").fadeOut();
     $("#leaderboard").on("transitionend", function () {
         $("#leaderboard").off("transitionend");
         $('#leaderb').attr('src', $('#leaderb').attr('src'));
@@ -150,15 +150,15 @@ function chiudiLeaderboard() {
     });
 }
 function apriLogin() {
+    $("#blackb").fadeIn();
     $("#login").show();
     // $("#login").css("maxWidth", $(".embed-responsive").first().css("width"));
     $("#login").addClass("visible");
-    $("#game").addClass("fade");
     $("#loginfr")[0].contentWindow.postMessage('{"name":"load"}', '*');
 }
 function chiudiLogin() {
     $("#login").removeClass("visible");
-    $("#game").removeClass("fade");
+    $("#blackb").fadeOut();
     $("#login").on("transitionend", function () {
         $("#login").off("transitionend");
         $('#loginfr').attr('src', $('#loginfr').attr('src'));
