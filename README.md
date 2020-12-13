@@ -6,7 +6,7 @@
 
 </div>
 
-Gioco ufficiale di degustazione di pettole nel borgo antico di Taranto Vecchia.
+Gioco ufficiale di degustazione di pettole nel borgo antico di Taranto Vecchio.
 
 
 
