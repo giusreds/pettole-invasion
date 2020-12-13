@@ -1,8 +1,8 @@
 <div align="center">
 
-## [**PLAY GAME**](https://kutt.it/pettoleinvasion)
+## [**PLAY GAME**](https://kutt.it/pettolegame)
 
-# [![icona](assets/logo.png)](https://kutt.it/pettoleinvasion)
+# [![icona](assets/logo.png)](https://kutt.it/pettolegame)
 
 </div>
 
