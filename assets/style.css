@@ -70,7 +70,6 @@ html, body {
     height: 100%;
 }
 .embed-responsive {
-    background: black;
     margin: auto;
     position: absolute;
     top: 0; bottom: 0; /* Centra verticalmente */
