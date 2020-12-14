@@ -26,7 +26,7 @@ var blackList = [
 ];
 
 
-var _cache = cacheName + "_v" + toString(cacheVersion);
+var _cache = cacheName + "_v" + cacheVersion.toString();
 self.addEventListener('install', function (e) {
 	console.log('[ServiceWorker] Installed');
 
