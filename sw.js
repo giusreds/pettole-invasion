@@ -54,7 +54,7 @@ self.addEventListener('activate', function (e) {
 			return Promise.all(cacheNames.map(function (thisCacheName) {
 
 				// If a cached item is saved under a previous cacheName
-				if (thisCacheName.contains(cacheName) && thisCacheName != _cache) {
+				if (thisCacheName.includes(cacheName) && thisCacheName != _cache) {
 
 					// Delete that cached file
 					console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
