@@ -25,7 +25,7 @@ function getSrc() {
         $.ajax({
             url: request_url + "?goto=pettole-origin",
             success: function (data) {
-                Cookies.set('pettole-origin', data.replace("index.html", ""), { expires: 7, path: '' });
+                Cookies.set('pettole-origin', data.replace("index.html", ""), { expires: 30, path: '' });
                 resolve(data.replace("index.html", ""));
             }
         });
