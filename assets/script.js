@@ -28,7 +28,7 @@ function getSrc() {
             url: request_url + "?goto=pettole-origin",
             success: function (data) {
                 var newUrl = data.replace("index.html", "")
-                Cookies.set('pettole-origin', newUrl, { expires: 30, path: '' });
+                Cookies.set('pettole-origin', newUrl, { expires: 120, path: '' });
                 resolve(newUrl);
             },
             error: function () {
