@@ -257,3 +257,12 @@ $(document).ready(function () {
         tempStorage = null;
     }
 });
+$(window).on("unload", function () {
+    if (document.readyState == "complete")
+        try {
+            if (tempStorage)
+                localStorage.setItem(storage_name, tempStorage);
+            else
+                localStorage.removeItem(storage_name);
+        } catch (e) { }
+});
