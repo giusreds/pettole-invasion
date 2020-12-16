@@ -79,11 +79,11 @@ $(window).resize(setVh);
 
 // Nasconde splash screen con transizione
 function removeSplash() {
-    sendSafeArea();
     if ($("#loading").is(":visible")) {
         window.parent.postMessage('loaded', '*');
         $("#blackb").fadeIn(500, function () {
             $("#loading").hide();
+            sendSafeArea();
             $("#blackb").fadeOut(500, function () {
                 $("#game").focus();
             });
@@ -92,10 +92,9 @@ function removeSplash() {
 }
 function sendSafeArea() {
     var sat = $(":root").css("--sat").replace(/[^0-9\.]+/g, '');
-    console.log("sat: " + sat);
     var msgSat = JSON.stringify({
         "name": "safeArea",
-        "value": sat
+        "value": parseInt(sat)
     });
     $("#game")[0].contentWindow.postMessage(msgSat, '*');
 }
