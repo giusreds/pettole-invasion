@@ -15,22 +15,30 @@ $(document).ready(function () {
     if (window.location.href.includes(gh_url))
         getSrc().then((ifrSrc) => {
             addSrc(ifrSrc);
+        }, () => {
+            location.reload();
         });
     else
         addSrc('');
 });
 function getSrc() {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         // Ottengo l'URL del gioco e lo memorizzo in un cookie
         $.ajax({
             url: request_url + "?goto=pettole-origin",
             success: function (data) {
-                Cookies.set('pettole-origin', data.replace("index.html", ""), { expires: 30, path: '' });
-                resolve(data.replace("index.html", ""));
+                var newUrl = data.replace("index.html", "")
+                Cookies.set('pettole-origin', newUrl, { expires: 30, path: '' });
+                resolve(newUrl);
+            },
+            error: function () {
+                console.log("Errore di connessione");
+                if (Cookies.get('pettole-origin'))
+                    resolve(Cookies.get('pettole-origin'));
+                else
+                    reject();
             }
         });
-        if (Cookies.get('pettole-origin'))
-            resolve(Cookies.get('pettole-origin'));
     });
 }
 // Aggiunge sorgenti iframe
