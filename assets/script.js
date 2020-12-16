@@ -91,7 +91,8 @@ function removeSplash() {
     }
 }
 function sendSafeArea() {
-    var sat = $(":root").css("--sat").replace(/^\D+/g, '');;
+    var sat = $(":root").css("--sat").replace(/[^0-9\.]+/g, '');
+    console.log("sat: " + sat);
     var msgSat = JSON.stringify({
         "name": "safeArea",
         "value": sat
