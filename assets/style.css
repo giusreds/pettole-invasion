@@ -18,29 +18,23 @@
         width: calc(var(--vh) * 56.25);
         height: calc(var(--vh) * 100);
     }
-    body {
-        background: #E2A7EC;
-    }
 }
 /* Nero sopra e sotto */
-@media (max-aspect-ratio: 703/1250) {
+@media (max-aspect-ratio: 11/25) {
     .embed-responsive {
         width: calc(var(--vw) * 100);
-        height: calc(var(--vw) * 177.77);
-    }
-    body {
-        background: linear-gradient(to bottom, #CE93D8 0%,#CE93D8 50%,#6D4C41 50%,#6D4C41 100%); /* W3C */
+        height: calc(var(--vw) * 233.33);
     }
 }
 /* Esatto */
-@media (aspect-ratio: 9/16) {
+@media (min-aspect-ratio: 9/20) and (max-aspect-ratio: 9/16) {
     .embed-responsive {
         width: 100%;
         height: 100%;
     }
-    body {
-        background: #000000;
-    }
+}
+body {
+    background: #E2A7EC;
 }
 @font-face {
     font-family: pixel;
