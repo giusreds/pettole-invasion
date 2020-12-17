@@ -140,3 +140,8 @@ html, body {
 #login.visible {
     top: 0;
 }
+#dots {
+    display: inline-block;
+    text-align: left;
+    width: 22px;
+}
