@@ -305,5 +305,5 @@ $(document).ready(function () {
         $("#dots").text(carTxt);
         if ($("#loading").is(":hidden"))
             clearInterval(carInt);
-    }, 300);
+    }, 340);
 })
