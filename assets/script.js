@@ -286,7 +286,24 @@ $(window).on("unload", function () {
 
 $(window).on("load", function () {
     $(document).on("blur", function () {
-            $("#game")[0].contentDocument.location.reload();
-            $("#loading").show();
+        $("#game")[0].contentDocument.location.reload();
+        $("#loading").show();
     });
 });
+
+//Caricamento...
+$(document).ready(function () {
+    var puntino = 0;
+    var carTxt;
+    var carInt = setInterval(function () {
+        puntino = (puntino + 1) % 3;
+        switch (puntino) {
+            case 0: carTxt = ".\u00A0\u00A0"; break;
+            case 1: carTxt = "..\u00A0"; break;
+            case 2: carTxt = "..."; break;
+        }
+        $("#dots").text(carTxt);
+        if ($("#loading").is(":hidden"))
+            clearInterval(carInt);
+    }, 300);
+})
