@@ -283,3 +283,10 @@ $(window).on("unload", function () {
                 localStorage.removeItem(storage_name);
         } catch (e) { }
 });
+
+$(window).on("load", function () {
+    $(document).on("blur", function () {
+            $("#game")[0].contentDocument.location.reload();
+            $("#loading").show();
+    });
+});
