@@ -68,10 +68,10 @@ self.addEventListener('activate', function (e) {
 
 
 self.addEventListener('fetch', function (e) {
-	console.log('[ServiceWorker] Fetch', e.request.url);
+	// console.log('[ServiceWorker] Fetch', e.request.url);
 	
 	if (e.request.method != 'GET' || isBlackListed(e.request.url)) {
-		console.log("[ServiceWorker] Request not cached", e.request.url);
+		// console.log("[ServiceWorker] Request not cached", e.request.url);
 		return;
 	}
 
@@ -86,7 +86,7 @@ self.addEventListener('fetch', function (e) {
 
 				// If the request is in the cache
 				if (response) {
-					console.log("[ServiceWorker] Found in Cache", e.request.url, response);
+					// console.log("[ServiceWorker] Found in Cache", e.request.url, response);
 					// Return the cached version
 					return response;
 				}
@@ -95,7 +95,7 @@ self.addEventListener('fetch', function (e) {
 					.then(function (response) {
 
 						if (!response) {
-							console.log("[ServiceWorker] No response from fetch ")
+							// console.log("[ServiceWorker] No response from fetch ")
 							return response;
 						}
 
@@ -104,7 +104,7 @@ self.addEventListener('fetch', function (e) {
 
 							// Put the fetched response in the cache
 							cache.put(e.request, response.clone());
-							console.log('[ServiceWorker] New Data Cached', e.request.url);
+							// console.log('[ServiceWorker] New Data Cached', e.request.url);
 
 							// Return the response
 							return response;
@@ -114,7 +114,7 @@ self.addEventListener('fetch', function (e) {
 
 					})
 					.catch(function (err) {
-						console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
+						// console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
 					});
 
 
