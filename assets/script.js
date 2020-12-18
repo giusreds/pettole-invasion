@@ -305,5 +305,13 @@ $(document).ready(function () {
         $("#dots").text(carTxt);
         if ($("#loading").is(":hidden"))
             clearInterval(carInt);
-    }, 340);
-})
+    }, 400);
+});
+$(window).on("load", function () {
+    $(window).on("visibilitychange", function () {
+        if (document.visibilityState === "visible")
+            $("#game")[0].contentWindow.focus();
+        else
+            $("#game")[0].contentWindow.blur();
+    });
+});

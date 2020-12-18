@@ -3,7 +3,7 @@
 
 // Set a name for the current cache
 const cacheName = 'pettoleinvasion';
-const cacheVersion = 1.13;
+const cacheVersion = 1.14;
 
 // Default files to always cache
 var cacheFiles = [
