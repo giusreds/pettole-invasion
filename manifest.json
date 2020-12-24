@@ -70,7 +70,7 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "/?pwa",
   "display": "fullscreen",
   "orientation": "portrait",
   "theme_color": "#B154C1",

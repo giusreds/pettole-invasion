@@ -6,7 +6,9 @@ const gh_url = "giusreds.github.io";
 const request_url = "https://script.google.com/macros/s/AKfycbydUKEi_amor9ytSXoAN_zki_zaD3n16PdGirMVoEicekCUnC0x/exec";
 // Storage
 const storage_name = "Pettole_token";
+const audio_name = "Pettole_audio";
 var tempStorage = null;
+var audio = 1;
 
 // Se la pagina e' caricata da GitHub, 
 // carico il gioco dal CDN di itch.io
@@ -92,6 +94,7 @@ function removeSplash() {
         $("#blackb").fadeIn(500, function () {
             $("#loading").hide();
             sendSafeArea();
+            sendAudio();
             $("#blackb").fadeOut(500, function () {
                 $("#game").focus();
             });
@@ -231,10 +234,27 @@ $(window).on("message", function (event) {
         case "setStorage": setStorage(message); break;
         case "getStorage": getStorage(source); break;
         case "clearStorage": clearStorage(); break;
+        case "audio": setAudio(message); break;
         default: return;
     }
 });
 
+// Scrive audio
+function setAudio(message) {
+    audio = (message.value) ? 1 : 0;
+    try {
+        localStorage.setItem(audio_name, audio);
+    } catch (e) { }
+    sendAudio();
+}
+// Invia audio
+function sendAudio() {
+    var r = {
+        "name": "audio",
+        "value": audio
+    };
+    $("#game")[0].contentWindow.postMessage(JSON.stringify(r), "*");
+}
 // Scrive nella storage
 function setStorage(message) {
     tempStorage = message.value;
@@ -269,8 +289,10 @@ function sendStorageToGame() {
 // Memorizza localStorage in memoria
 $(document).ready(function () {
     try {
+        audio = (localStorage.getItem(audio_name)) ? localStorage.getItem(audio_name) : 1;
         tempStorage = localStorage.getItem(storage_name);
     } catch (e) {
+        audio = 1;
         tempStorage = null;
     }
 });
