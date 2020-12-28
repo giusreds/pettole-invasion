@@ -2,7 +2,7 @@
 
 ## [**PLAY GAME**](https://kutt.it/pettolegame)
 
-# [![icona](assets/logo.png)](https://kutt.it/pettolegame)
+# [![icona](logo.png)](https://kutt.it/pettolegame)
 
 </div>
 
