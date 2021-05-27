@@ -1,0 +1,70 @@
+<!-- (c)2020 Giuseppe Rossi -->
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <!-- Proprieta -->
+    <meta charset="UTF-8">
+    <title>Pettole Invasion Classifica</title>
+    <meta name="author" content="Giuseppe Rossi">
+    <meta name="copyright" content="Giuseppe Rossi">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Stile -->
+    <link rel="stylesheet" href="css/nes.css" type="text/css">
+    <link rel="stylesheet" href="css/leaderboard.css" type="text/css">
+
+    <!-- Icone FontAwesome -->
+    <script src="https://kit.fontawesome.com/0d16a8293a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div id="menu">
+            <button id="chiudi" class="nes-btn scroll-btn"><span><i class="fas fa-angle-left"></i></span></button>
+            <button id="aggiorna" class="nes-btn scroll-btn"><span><i class="fas fa-sync"></i></span></button>
+        </div>
+    </header>
+    <main class="main-content">
+        <div id="loading">
+            <img id="clessidra" alt="caricamento" src="clessidra.gif">
+        </div>
+        <div id="container">
+            <div class="card" id="accedi">
+                <div class="nes-container">
+                    <p class="nes-text">
+                        <b>Accedi o registrati</b><br>per entrare a far parte della classifica.
+                    </p>
+                    <button class="nes-btn is-error" id="accedi-btn">ACCEDI</button>
+                </div>
+            </div>
+            <div class="card" id="stats">
+                <div class="nes-container">
+                    <p class="nes-text">
+                        <b><span id="PettolePlay">...</span></b><br>DEGUSTAZIONI<br>
+                    </p>
+                    <p class="nes-text">
+                        <b><span id="PettoleDegustate">...</span></b><br>TOTALE PETTOLE
+                    </p>
+                </div>
+            </div>
+            <p id="copy">Made by <b>Giuseppe Rossi</b></p>
+            <div class="card" id="clasComunale">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="js/leaderboard.js"></script>
+
+</body>
+
+</html>

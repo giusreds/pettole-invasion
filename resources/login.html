@@ -1,0 +1,126 @@
+<!-- (c)2020 Giuseppe Rossi -->
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <!-- Proprieta -->
+    <meta charset="UTF-8">
+    <title>Pettole Invasion Login</title>
+    <meta name="author" content="Giuseppe Rossi">
+    <meta name="copyright" content="Giuseppe Rossi">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Stile -->
+    <link rel="stylesheet" href="css/nes.css" type="text/css">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+
+    <!-- Icone FontAwesome -->
+    <script src="https://kit.fontawesome.com/0d16a8293a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <p>
+            <button id="chiudi" class="nes-btn scroll-btn is-error" onclick="chiudiLogin()"><span><i
+                        class="fas fa-times"></i></span></button>
+            <button id="hogia" class="nes-btn is-success" onclick="toLogin()">HO GIA UN ACCOUNT</button>
+            <button id="nhogia" class="nes-btn is-success" onclick="toReg()">REGISTRATI</button>
+        </p>
+    </header>
+    <main class="main-content">
+
+        <!-- Login -->
+        <div id="login" class="nes-container">
+            <div class="center">
+                <br>
+                <h1>Accedi</h1>
+            </div>
+            <form class="loginform" onsubmit="return accedi()" id="login-form">
+                <div class="nes-field">
+                    <label for="username">Username</label>
+                    <input type="text" id="username_l" name="username" placeholder="Il tuo username"
+                        autocomplete="username" class="nes-input" maxlength="30">
+                </div>
+                <br>
+                <div class="nes-field">
+                    <label for="psw">Password</label>
+                    <input type="password" id="password_l" name="psw" placeholder="La tua password"
+                        autocomplete="current-password" class="nes-input" maxlength="64">
+                </div>
+                <div class="nes-field center">
+                    <br>
+                    <p id="error_l"></p>
+                    <button id="accedi-btn" type="submit" class="nes-btn is-primary">ACCEDI</button>
+                    <br>
+                    <br>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registrazione -->
+        <div id="registrati" class="nes-container">
+            <div class="center">
+                <br>
+                <h1>Registrati</h1>
+            </div>
+            <form onsubmit="return register()" id="register-form">
+                <div class="nes-container">
+                    <div class="nes-field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username_r" name="username" placeholder="Scegli un username"
+                            maxlength="30" autocomplete="username" required class="nes-input">
+                        <p id="username-msg"></p>
+                        <p class="nes-text">
+                            Puo' essere composto da lettere,
+                            cifre, underscore e punti.
+                            <br><span class="nes-text is-primary">Puoi ispirarti al tuo account Instagram.</span>
+                        </p>
+                    </div>
+                    <div class="nes-field">
+                        <label for="psw">Password</label>
+                        <input type="password" id="password1" name="psw" placeholder="Password"
+                            autocomplete="new-password" required maxlength="64" class="nes-input">
+                        <p id="psw1-msg"></p>
+                        <p class="nes-text">
+                            Una password efficace dovrebbe contenere
+                            lettere maiuscole, minuscole, numeri e simboli.
+                        </p>
+                    </div>
+                    <div class="nes-field">
+                        <label for="psw-rep">Conferma Password</label>
+                        <input type="password" id="password2" name="psw-rep" placeholder="Ripeti la password" required
+                            maxlength="64" class="nes-input">
+                        <p id="psw2-msg"></p>
+                    </div>
+                    <div class="nes-field center">
+                        <br>
+                        <p id="error"></p>
+                        <button id="registrati-btn" class="nes-btn is-primary" type="submit">REGISTRATI</button>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Logged in -->
+        <div id="logout" class="nes-container center">
+            <br>
+            <h3>Stai giocando come</h3>
+            <h2 id="loggedUserName">null</h2>
+            <button class="nes-btn is-error" id="logout-btn">LOG OUT</button>
+            <br><br>
+        </div>
+    </main>
+
+    <!-- Script -->
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

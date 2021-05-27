@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: pixel;
+    src: url(../../assets/font.ttf);
+}
+/* Zoom */
+html {
+    zoom: 100%;
+}
+
+body {
+    padding: 0.2rem 0.2rem;
+    margin: 0.2rem 0.2rem;
+}
+footer {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+    scroll-behavior: smooth;
+    font-family: "pixel";
+}
+
+#login {
+    display: none;
+}
+#logout {
+    display: none;
+}
+#registrati {
+    display: none;
+}
+
+#comunebox {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.nes-container {
+    padding: 10px;
+}
+.main-content {
+    padding-top: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    margin-top: 90px;
+}
+.center {
+    text-align: center;
+}
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 12px;
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 78px;
+    background-color: white;
+    border-bottom: 4px solid #D3D3D3;
+}
+
+.scroll-btn > span {
+    margin-left: 6px;
+    margin-right: 6px;
+    display: block;
+}
+header p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#chiudi {
+    left: 10px;
+    float: left;
+}
+#hogia, #nhogia {
+    right: 10px;
+    float: right;
+}
+
+/* Lowercase
+#username_l, #username_r, #email {
+    text-transform: lowercase;
+}
+*/
+
+#loggedUserName {
+    margin-bottom: 20px;
+}
+
+#registrati-btn, #accedi-btn, #logout-btn {
+    min-width: 160px;
+}

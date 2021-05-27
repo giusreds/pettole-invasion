@@ -1,0 +1,170 @@
+@font-face {
+    font-family: pixel;
+    src: url(../../assets/font.ttf);
+}
+/* Zoom */
+html {
+    zoom: 100%;
+}
+#stats, #accedi {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+#PettoleDegustate, #PettolePlay {
+    font-size: 24px;
+}
+#stats > div {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+#copy {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+#accedi {
+    display: none;
+}
+
+#loading {
+    height: 100%;
+    width: 100%;
+}
+
+#clessidra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 78px;
+    height: 78px;
+    margin-top: -39px;
+    margin-left: -39px;
+}
+
+#container {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.card {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.card > span {
+    padding-bottom: 6px;
+    font-size: 16pt;
+}
+
+#comunale {
+    background-color: #CE93D8;
+    text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+}
+#comunale > div:nth-child(odd) {
+    background-color: #AB47BC;
+}
+#comunale > div {
+    border-top: 0px solid #000000;
+    color: white;
+}
+
+#comunale .row .main {
+    margin-top: 12px;
+    margin-left: 42px;
+}
+
+.table {
+    width: 100%;
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+@media (max-width: 600px) {
+    .table {
+      border-left: none;
+      border-right: none;
+    }
+  }
+.table .row {
+    padding: 4px;
+    width: 100%;
+    height: 74px;
+    position: relative;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+}
+.table .row .rank {
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 20px;
+    left: 0;
+}
+.table .row .score {
+    position: absolute;
+    right: 0;
+    margin-top: 16px;
+    margin-right: 8px;
+    font-size: 16pt;
+}
+.table .row .main {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 36px;
+    font-size: 17pt;
+}
+.table .row .user {
+    position: absolute;
+    margin-left: 36px;
+    margin-top: 40px;
+    font-size: 9pt;
+}
+
+body {
+    font-family: pixel;
+    background-color: white;
+    padding-bottom: 40px;
+}
+.main-content {
+    height: 100%;
+    padding-top: 90px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 12px;
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 78px;
+    background-color: white;
+    border-bottom: 4px solid #D3D3D3;
+}
+.scroll-btn > span {
+    display: block;
+    min-width: 22px;
+}
+#chiudi {
+    left: 10px;
+    float: left;
+}
+#aggiorna {
+    right: 10px;
+    float: right;
+}
+
+#accedi-btn {
+    min-width: 160px;
+}
+header div {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
